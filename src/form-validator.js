@@ -8,10 +8,8 @@ export default (() => {
 
   const _validatorTemplates = {
     required: () => value => !_isEmpty(value),
-    minLength: _createValidatorFunction((value, minLength) =>
-      value.length >= minLength),
-    maxLength: _createFieldValidators((value, maxLength) =>
-      value.length <= maxLength)
+    minlength: _createValidatorFunction((value, minLength) =>
+    value.length >= minLength)
   };
 
   return {
