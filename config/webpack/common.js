@@ -6,14 +6,14 @@
 
 module.exports = (__dirname, fileName) => {
   return {
-    entry: './index.js',
+    entry: './src/form-validator.js',
 
     output: {
       path: __dirname + '/dist',
-      filename: fileName,
-      library: 'formValidator',
-      libraryTarget: 'umd',
-      umdNamedDefine: true
+      filename: fileName
+      // library: 'formValidator',
+      // libraryTarget: 'umd',
+      // umdNamedDefine: true
     },
 
     resolve: {

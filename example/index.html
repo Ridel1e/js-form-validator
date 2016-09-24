@@ -3,11 +3,52 @@
 <head>
     <meta charset="UTF-8">
     <title>Title</title>
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+
+    <style>
+        #userRegistrationForm {
+            border: 1px solid black;
+            margin-top: 100px;
+            padding: 40px;
+        }
+    </style>
 </head>
 <body>
-    <script src="../dist/form-validator.js"></script>
-    <script>
-        console.log(formValidator);
-    </script>
+    <main class="container row">
+        <form name="userRegistrationForm" action="" id="userRegistrationForm" class="col-md-5 offset-md-5">
+
+            <div class="form-group row">
+                <h2>User Registration Form</h2>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label for="userLogin">Login</label>
+                </div>
+                <div class="col-md-8 offset-md-2">
+                    <input name="userLogin" id="userLogin" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label for="userPassword">Password</label>
+                </div>
+                <div class="col-md-8 offset-md-2">
+                    <input name="userPassword" id="userPassword" type="text">
+                </div>
+            </div>
+            <div class="form-group row">
+                <div class="col-md-2">
+                    <label for="userPasswordConfirmation">Password Repeat</label>
+                </div>
+                <div class="col-md-8 offset-md-2">
+                    <input name="userPasswordConfirmation" id="userPasswordConfirmation" type="text">
+                </div>
+            </div>
+        </form>
+    </main>
+
+    <script src="dependencies/form-validator/form-validator.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>

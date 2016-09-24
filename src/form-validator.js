@@ -2,14 +2,31 @@
  * Created by ridel1e on 23/09/16.
  */
 
+/* importing concateAll and distinct array methods */
 import './helpers/array-polyfill';
 
-export default (() => {
+window.formValidator = (() => {
 
+  /**
+   * Object with validator functions templates
+   * @type {{required: (function(): function(): boolean), minLength: (function(): function()), maxLength: (function(): function()), min: (function(): function()), max: (function(): function()), email: (function(): function())}}
+   * @private
+   */
   const _validatorTemplates = {
     required: () => value => !_isEmpty(value),
-    minlength: _createValidatorFunction((value, minLength) =>
-    value.length >= minLength)
+    minLength: _createValidatorFunction((value, minLength) =>
+      value.length >= minLength),
+    maxLength: _createValidatorFunction((value, maxLength) =>
+      value.length <= maxLength),
+    min: _createValidatorFunction((value, minValue) =>
+      value >= minValue),
+    max: _createValidatorFunction((value, maxValue) =>
+      value <= maxValue),
+    email: _createValidatorFunction((value) => {
+      const EMAIL_REGEXP = /qwe/;
+
+      return EMAIL_REGEXP.test(value);
+    })
   };
 
   return {

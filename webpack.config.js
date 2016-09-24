@@ -5,15 +5,20 @@
 'use strict';
 
 const configs = {
-  // common configs
-  common: require('./config/webpack/common.config'),
+  /* common configs */
+  common: require('./config/webpack/common.js'),
 
-  // environment configs
-  production: require('./config/webpack/environments/production.config'),
-  development: require('./config/webpack/environments/development.config')
+  /* environment configs */
+  production: require('./config/webpack/environments/production.js'),
+  development: require('./config/webpack/environments/development.js')
 
 };
 
+/**
+ * Returns file name depending on environment
+ * @param environment
+ * @returns {string}
+ */
 const getFileName = function (environment) {
   const libName = 'form-validator';
 
@@ -25,11 +30,13 @@ const getFileName = function (environment) {
   }
 };
 
+/**
+ * Returns final config object
+ * @returns {*}
+ */
 const loadConfig = function () {
   const NODE_ENV = process.env.NODE_ENV || 'development';
-
   const fileName = getFileName(NODE_ENV);
-
 
   return Object.assign({}, configs.common(__dirname, fileName), configs[NODE_ENV]);
 };
