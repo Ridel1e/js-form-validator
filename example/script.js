@@ -48,3 +48,4 @@ formValidator
   });
 
 formValidator.setFormValidation('userRegistrationForm', registrationFormScheme);
+
