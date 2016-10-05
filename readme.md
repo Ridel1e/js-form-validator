@@ -4,7 +4,7 @@ Js Form Validation - Package for simplify form validation
 ## What is it ?
 
 Js Form Validation is a simple package to validate your forms. This package works with standard js form API, 
-so you can use any error message customisation library (or write own realization) with this package
+so you can use any error message customisation library (or write own realization) with it.
 
 ## Installation
 
