@@ -39,19 +39,29 @@ Js Form Validation has 2 methods only:
  
  set your validation rules to your form
  
- | Param | Type | Description |
- | --- | --- | --- |
- | formName | <code>String</code> | your html form name |
- | rules | <code>Object</code> | An object with validation rules |
+ __Parameters:__
+ 
+ __formName__
+ Type: __String__
+ your html form name.
+ 
+ __rules__
+ Type: __Object__
+ An object with validation rules.
  
 #### addValidator(validatorName, callback)
 
  add custom form validator
  
-  | Param | Type | Description |
-  | --- | --- | --- |
-  | validatorName | <code>String</code> | name of your validator (example: 'passwordConfirmation') |
-  | callback | <code>Function</code> | your validator function |
+ __Parameters:__
+ 
+ __validatorName__
+ Type: __String__
+ name of your validator (example: 'passwordConfirmation').
+ 
+ __callback__
+ Type: __Function__
+ your validator function.
   
  __Notice:__
   
@@ -112,7 +122,9 @@ Js Form Validation has 2 methods only:
    
   Also rule can two additional properties:
   - __data__ - additional data to check rule validity (example min length value to min length check)
-  - __bindWith__ - fields, that value you want use on your check (example password confirmation :)) 
+  - __bindWith__ - fields, that value you want use on your check (example password confirmation :))
+   
+   __NOTICE: each field in config object must be named like in your html file__
    
   Example:
   ```javascript
@@ -155,7 +167,17 @@ Js Form Validation has 2 methods only:
     }];
   ```
   
-  Notice: by default js form validator has following validators:
+  this config object represents following web form
+  ```HTML
+    <form name="userRegistrationForm" action="" id="userRegistrationForm" class="col-md-5 offset-md-5">
+      <input name="userLogin" id="userLogin" type="text" class="form-control" placeholder="login">
+      <input name="userPassword" id="userPassword" type="password" class="form-control" placeholder="password">
+      <input name="userPasswordConfirmation" id="userPasswordConfirmation" type="password" class="form-control" placeholder="password confirmation">
+      <button class="btn bg-primary submit-btn">Submit</button>
+    </form>
+  ```
+  
+  __Notice: by default js form validator has following validators:__
   
   - __required__ - field required check. 
   - __minLength__ - field value min length check (has data additional parameter).
