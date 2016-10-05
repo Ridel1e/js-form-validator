@@ -47,7 +47,11 @@ Js Form Validation has 2 methods only:
  
  __rules__
  Type: __Object__
- An object with validation rules.
+ An object with validation rules. (See Config Object section)
+ 
+ ```javascript
+     formValidator.setFormValidation('userRegistrationForm', registrationFormRules);
+  ```
  
 ### addValidator(validatorName, callback)
 
@@ -75,8 +79,8 @@ Js Form Validation has 2 methods only:
  
  where:
  
- - __fieldValue__ - current validated field value,
- - __data__ - additional data, provides by config object
+ - __fieldValue__ - current validated field value
+ - __data__ - additional data provided by config object
  - __firstBoundedFieldValue__, __secondBoundedFieldValue__ - values of bounded field (example: password field in password confirmation check)
  
  __if you didn't specify 'data' in config object, you still must provide data parameter in your function!__ 
@@ -122,9 +126,9 @@ Js Form Validation has 2 methods only:
    
   Also rule can two additional properties:
   - __data__ - additional data to check rule validity (example min length value to min length check)
-  - __bindWith__ - fields, that value you want use on your check (example password confirmation :))
+  - __bindWith__ -  field values that you want to use in Validator function (example password confirmation :))
    
-   __NOTICE: each field in config object must be named like in your html file__
+   NOTICE: each field in config object must have named like in your html file
    
   Example:
   ```javascript
@@ -177,7 +181,7 @@ Js Form Validation has 2 methods only:
     </form>
   ```
   
-  __Notice: by default js form validator has following validators:__
+  __Notice: default js form validator has following validators:__
   
   - __required__ - field required check. 
   - __minLength__ - field value min length check (has data additional parameter).
@@ -189,11 +193,11 @@ Js Form Validation has 2 methods only:
 ## Example
 
  You can find example of usage js-form-validator in 'example' folder.
- To run example you must execute the following commands:
+ you must execute the following commands to run example:
  
   ```
     npm install
     npm start
   ```
     
-  Now example will be available on http://localhost:4000/
+  Now example will be available on [http://localhost:4000/](http://localhost:4000/)
