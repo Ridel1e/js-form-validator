@@ -1,11 +1,11 @@
 {
   "name": "js-form-validator",
   "version": "1.0.0",
-  "description": "",
+  "description": "Js Form Validation - Package for simplify form validation =========================================================",
   "main": "index.js",
   "directories": {
     "example": "example",
-    "test": "test"
+    "test": "tests"
   },
   "scripts": {
     "build": "NODE_ENV=production webpack",
@@ -21,5 +21,14 @@
     "chai": "^3.5.0",
     "mocha": "^3.0.2",
     "webpack": "^1.13.2"
-  }
+  },
+  "dependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Ridel1e/js-form-validator.git"
+  },
+  "bugs": {
+    "url": "https://github.com/Ridel1e/js-form-validator/issues"
+  },
+  "homepage": "https://github.com/Ridel1e/js-form-validator#readme"
 }
