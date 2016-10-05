@@ -1,19 +1,19 @@
 Js Form Validation - Package for simplify form validation
 =========================================================
 
-### What is it ?
+## What is it ?
 
 Js Form Validation is a simple package to validate your forms. This package works with standard js form API, 
 so you can use any error message customisation library (or write own realization) with this package
 
-### Installation
+## Installation
 
 npm
 ```
     npm install js-form-validation --save
 ```
 
-### Including package in your project
+## Including package in your project
 
 There are two ways to include js-form-validator in your project:
 
@@ -31,15 +31,15 @@ or
     var formValidator = require('js-form-validator');
 ```
 if you use es5 syntax
-### API
+## API
 
 Js Form Validation has 2 methods only:
 
-#### setFormValidation(formName, rules)
+### setFormValidation(formName, rules)
  
  set your validation rules to your form
  
- __Parameters:__
+####Parameters
  
  __formName__
  Type: __String__
@@ -49,11 +49,11 @@ Js Form Validation has 2 methods only:
  Type: __Object__
  An object with validation rules.
  
-#### addValidator(validatorName, callback)
+### addValidator(validatorName, callback)
 
  add custom form validator
  
- __Parameters:__
+####Parameters:
  
  __validatorName__
  Type: __String__
@@ -91,7 +91,7 @@ Js Form Validation has 2 methods only:
        });
  ```
  
-### Config object
+## Config object
     
  Config object has the following structure:
     
@@ -186,7 +186,7 @@ Js Form Validation has 2 methods only:
   - __max__ - field value greater than max value check (has data additional parameter). __NOTICE: html input type must be number__
   - __email__ - field value on email pattern check.
    
-### Example
+## Example
 
  You can find example of usage js-form-validator in 'example' folder.
  To run example you must execute the following commands:
