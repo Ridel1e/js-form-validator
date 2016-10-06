@@ -1,0 +1,108 @@
+.wrapper {
+    display: flex;
+    flex-direction: column;
+}
+
+.header {
+    background: #3D5AFE;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.12),
+    0 5px 2px rgba(0,0,0,0.24);
+    height: 75px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1;
+
+}
+
+.content {
+    background: white;
+    box-shadow: 0 5px 3px rgba(0,0,0,0.24),
+                2px 1px 3px rgba(0,0,0,0.24),
+                -2px 1px 3px rgba(0,0,0,0.24);
+    font-family: 'Roboto', sans-serif;
+    height: 400px;
+    margin: 2% auto;
+    position: relative;
+    width: 60%;
+    z-index: 3;
+
+    /* flex container properties */
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    /*justify-content: center;*/
+}
+
+.registration-form {
+    color: rgba(0,0,0,.7);
+    font-weight: 500;
+
+    /* flex container properties */
+    display: flex;
+    flex-direction: column;
+}
+
+.registration-form_form-control {
+    display: flex;
+    flex-direction: column;
+    height: 60px;
+}
+
+.registration-form__input {
+    border: none;
+    box-shadow: 0 2px 0 rgba(0,0,0,.5);
+    color: rgba(0,0,0,.6);
+    height: 40px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    font-weight: bold;
+    margin: 5% 0;
+    width: 230px;
+}
+
+.registration-form__input:focus {
+    box-shadow: 0 2px 0 #3D5AFE;
+    outline: none;
+}
+
+.registration-form__input:focus:invalid {
+    box-shadow: 0 2px 0 #D32F2F;
+}
+
+.registration-form__input:invalid {
+    box-shadow: 0 2px 0 #D32F2F;
+}
+
+.registration-form__input::-moz-placeholder,
+.registration-form__input::-webkit-input-placeholder,
+.registration-form__input:-ms-input-placeholder {
+    color: rgba(0,0,0,.4);
+    font-family: 'Roboto', sans-serif;
+}
+
+.registration-form__input-error {
+    color: #D32F2F;
+    font-size: .7em;
+    min-height: 10px;
+}
+
+.registration-form__button {
+    align-self: center;
+    background: white;
+    box-shadow: 0 2px 1px rgba(0,0,0,.6),
+                0 0 1px rgba(0,0,0,.6);
+    border: none;
+    height: 45px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 1.3em;
+    margin: 15% 0;
+    width: 130px;
+}
+
+.registration-form__button:hover {
+    box-shadow: 0 2px 1px rgba(0,0,0,.6),
+                0 0 1px rgba(0,0,0,.6),
+                0 6px 10px rgba(0,0,0,.4);
+}

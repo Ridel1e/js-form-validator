@@ -200,4 +200,4 @@ Js Form Validation has 2 methods only:
     npm start
   ```
     
-  Now example will be available on [http://localhost:4000/](http://localhost:4000/)
+  Example will be available on [http://localhost:4000/](http://localhost:4000/)

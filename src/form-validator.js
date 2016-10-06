@@ -23,7 +23,7 @@ window.formValidator = (() => {
     max: _createValidatorFunction((value, maxValue) =>
       value <= maxValue),
     email: _createValidatorFunction((value) => {
-      const EMAIL_REGEXP = /qwe/;
+      const EMAIL_REGEXP = /^(("[\w-\s]+")|([\w-]+(?:\.[\w-]+)*)|("[\w-\s]+")([\w-]+(?:\.[\w-]+)*))(@((?:[\w-]+\.)*\w[\w-]{0,66})\.([a-z]{2,6}(?:\.[a-z]{2})?)$)|(@\[?((25[0-5]\.|2[0-4][0-9]\.|1[0-9]{2}\.|[0-9]{1,2}\.))((25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\.){2}(25[0-5]|2[0-4][0-9]|1[0-9]{2}|[0-9]{1,2})\]?$)/i;
 
       return EMAIL_REGEXP.test(value);
     })
@@ -78,7 +78,6 @@ window.formValidator = (() => {
     const runFieldValidation = () => {
       const errorMessage = _getFieldErrorMessage(field, fieldValidators);
       field.setCustomValidity(errorMessage);
-      console.dir(field.validationMessage);
     };
 
     _setFieldListener(field, runFieldValidation);
@@ -88,7 +87,7 @@ window.formValidator = (() => {
 
 
     /* run validation after listener creation */
-    field.dispatchEvent(new Event('input'));
+    // field.dispatchEvent(new Event('input'));
   }
 
   /**

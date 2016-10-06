@@ -1,58 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-
-    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
-
-    <style>
-        #userRegistrationForm {
-            align-items: center;
-            box-shadow: 1px 0 3px grey;
-            display: flex;
-            flex-direction: column;
-            height: 400px;
-            justify-content: space-around;
-            margin-top: 100px;
-            padding: 40px;
-        }
-
-        h2 {
-            color: grey;
-            text-shadow: 1px 1px 1px darkgray;
-        }
-
-        .submit-btn {
-            align-self: flex-start;
-        }
-
-        .error {
-            color: #9d223c;
-            align-self: flex-start;
-            font-size: 12px;
-        }
-
-        input:invalid {
-            border: 1px solid red;
-        }
-    </style>
+	<meta charset="UTF-8">
+	<title>Example</title>
+	<link rel="stylesheet" href="styles.css">
+	<link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
 </head>
 <body>
-    <main class="container row">
-        <form name="userRegistrationForm" action="" id="userRegistrationForm" class="col-md-5 offset-md-5">
-            <h2>User Registration Form</h2>
-            <input name="userLogin" id="userLogin" type="text" class="form-control" placeholder="login">
-            <span class="error userLoginError">login is required</span>
-            <input name="userPassword" id="userPassword" type="password" class="form-control" placeholder="password">
-            <span class="error userPassword">login is required</span>
-            <input name="userPasswordConfirmation" id="userPasswordConfirmation" type="password" class="form-control" placeholder="password confirmation">
-            <span class="error userPasswordConfirmation">login is required</span>
-            <button class="btn bg-primary submit-btn">Submit</button>
-        </form>
-    </main>
-
-    <script src="node_modules/js-form-validator/dist/form-validator.min.js"></script>
-    <script src="script.js"></script>
+	<header class="header"></header>
+	<main class="content">
+		<form name="userRegistrationForm" class="registration-form" novalidate>
+			<h2>User Registration Form</h2>
+			<div class="registration-form_form-control">
+				<input name="userLogin" type="text" class="registration-form__input" placeholder="Login">
+				<span class="registration-form__input-error" for="userLogin"></span>
+			</div>
+			<div class="registration-form_form-control">
+				<input name="userEmail" type="text" class="registration-form__input" placeholder="Email">
+				<span class="registration-form__input-error" for="userEmail"></span>
+			</div>
+			<div class="registration-form_form-control">
+				<input name="userPassword" type="password" class="registration-form__input" placeholder="Password">
+				<span class="registration-form__input-error" for="userPassword"></span>
+			</div>
+			<div class="registration-form_form-control">
+				<input name="userPasswordConfirmation" type="password" class="registration-form__input" placeholder="Password confirmation">
+				<span class="registration-form__input-error" for="userPasswordConfirmation"></span>
+			</div>
+			<button class="registration-form__button">Submit</button>
+		</form>
+	</main>
+	<script src="node_modules/js-form-validator/dist/form-validator.min.js"></script>
+	<script src="script.js"></script>
 </body>
 </html>

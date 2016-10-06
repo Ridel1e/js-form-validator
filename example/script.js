@@ -21,6 +21,15 @@ var registrationFormScheme = [{
     data: 12
   }]
 }, {
+  name: 'userEmail',
+  rules: [{
+    name: 'required',
+    message: 'field is required'
+  }, {
+    name: 'email',
+    message: 'it is a not valid Email address'
+  }]
+}, {
   name: 'userPassword',
   rules: [{
     name: 'required',
@@ -48,4 +57,19 @@ formValidator
   });
 
 formValidator.setFormValidation('userRegistrationForm', registrationFormScheme);
+
+
+
+var inputs = document.getElementsByClassName('registration-form__input');
+var errors = document.getElementsByClassName('registration-form__input-error');
+
+Array.prototype.forEach.call(inputs, function (input) {
+  input.addEventListener('keyup', function () {
+    Array.prototype.forEach.call(errors, function (error) {
+      if(error.getAttribute('for') === input.name) {
+        error.innerText = input.validationMessage;
+      }
+    })
+  })
+});
 
