@@ -1,6 +1,6 @@
 {
   "name": "js-form-validator",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Js Form Validation - Package for simplify form validation =========================================================",
   "main": "index.js",
   "directories": {
